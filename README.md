@@ -23,8 +23,8 @@ name = "Louis Sayers"
 domain = "louissayers.com"
 possible_emails = Emagen.for(name, domain)
 
-&#35; Returns a list of possible emails such as:
-&#35; LouisSayers@louissayers.com, LSayers@louissayers.com L.S@louissayers.com
+# Returns a list of possible emails such as:
+#=> [LouisSayers@louissayers.com, LSayers@louissayers.com L.S@louissayers.com]
 ```
 
 

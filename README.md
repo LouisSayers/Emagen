@@ -17,6 +17,7 @@ Or install it yourself as:
     $ gem install emagen
 
 ## Usage
+```ruby
 require 'emagen'
 name = "Louis Sayers"
 domain = "louissayers.com"
@@ -24,6 +25,7 @@ possible_emails = Emagen.for(name, domain)
 
 &#35; Returns a list of possible emails such as:
 &#35; LouisSayers@louissayers.com, LSayers@louissayers.com L.S@louissayers.com
+```
 
 
 ## Contributing

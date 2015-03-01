@@ -1,7 +1,10 @@
 require "emagen/version"
+require "emagen/web_address"
 
 module Emagen
-  def for(name, domain)
+  def for(name, web_address)
+    domain = WebAddress.new(web_address).domain
+
     first_name, last_name = name.split
     first_initial, last_initial = first_name[0], last_name[0]
     patterns = %w{

@@ -2,8 +2,9 @@ require 'spec_helper'
 
 describe Emagen do
   let(:domain) { "domain.com" }
+  let(:web_address) { "http://www.domain.com" }
 
-  describe '#for' do
+  describe 'for' do
     context "valid arguments" do
       it "should generate email addresses" do
         expected_usernames = %w{
@@ -13,10 +14,15 @@ describe Emagen do
           Jack_Black J_Black Jack_B J_B Black_Jack Black_J B_J
         }
 
-        emails = Emagen.for("Jack Black", domain)
+        emails = subject.for("Jack Black", domain)
         expected_usernames.each do |username|
           expect(emails).to include("#{username}@#{domain}")
         end
+      end
+
+      it "should generate email addresses from a name, web address" do
+        emails = subject.for("Jack Black", web_address)
+        expect(emails).to include("JackBlack@#{domain}")
       end
     end
   end

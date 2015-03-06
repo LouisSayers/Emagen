@@ -8,7 +8,7 @@ module Emagen
 
     private
     def domain_from(web_address)
-      web_address.split('.').slice(-2..-1).join('.')
+      web_address.split(/(\/\/|\.)/).slice(-3..-1).join
     end
   end
 end
